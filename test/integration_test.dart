@@ -83,6 +83,7 @@ void main() {
         // Stream completion
         final chunks = <String>[];
         await for (final chunk in client.streamChat('Count from 1 to 5')) {
+          
           chunks.add(chunk.textChunk);
 
           if (chunk.isDone) break;
